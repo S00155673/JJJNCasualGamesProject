@@ -80,3 +80,8 @@ C:\Users\s00155673\Source\Repos\JJJNCasualGamesProject\MonoGameClient\bin\Window
 C:\Users\s00155673\Source\Repos\JJJNCasualGamesProject\MonoGameClient\obj\x86\Debug\MonoGameClient.csprojResolveAssemblyReference.cache
 C:\Users\s00155673\Source\Repos\JJJNCasualGamesProject\MonoGameClient\obj\x86\Debug\MonoGameClient.exe
 C:\Users\s00155673\Source\Repos\JJJNCasualGamesProject\MonoGameClient\obj\x86\Debug\MonoGameClient.pdb
+C:\Users\s00155673\Source\Repos\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\Message.xnb
+C:\Users\s00155673\Source\Repos\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\Player 1.xnb
+C:\Users\s00155673\Source\Repos\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\Player 2.xnb
+C:\Users\s00155673\Source\Repos\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\Player 3.xnb
+C:\Users\s00155673\Source\Repos\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\Player 4.xnb
