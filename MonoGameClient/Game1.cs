@@ -95,7 +95,7 @@ namespace MonoGameClient
                 case ConnectionState.Connected:
                     connectionMessage = "Connected...";
                     Connected = true;
-                    //startGame();
+                    startGame();
                     break;
                 case ConnectionState.Disconnected:
                     connectionMessage = "Disconnected...";
