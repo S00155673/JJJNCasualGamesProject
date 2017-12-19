@@ -1,0 +1,4 @@
+c:\users\s00155673\documents\visual studio 2015\Projects\CasualGamesProject\CommonDataItems\bin\Debug\CommonDataItems.dll
+c:\users\s00155673\documents\visual studio 2015\Projects\CasualGamesProject\CommonDataItems\bin\Debug\CommonDataItems.pdb
+c:\users\s00155673\documents\visual studio 2015\Projects\CasualGamesProject\CommonDataItems\obj\Debug\CommonDataItems.dll
+c:\users\s00155673\documents\visual studio 2015\Projects\CasualGamesProject\CommonDataItems\obj\Debug\CommonDataItems.pdb
