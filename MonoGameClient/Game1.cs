@@ -3,18 +3,15 @@ using Microsoft.AspNet.SignalR.Client;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using CommonDataItems;
 
 namespace MonoGameClient
-{
-    /// <summary>
-    /// This is the main type for your game.
-    /// </summary>
+{ 
     public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         string connectionMessage = string.Empty;
-
 
         // The Signalr Client objects
         HubConnection serverConnection;
@@ -28,15 +25,9 @@ namespace MonoGameClient
             Content.RootDirectory = "Content";
         }
 
-        /// <summary>
-        /// Allows the game to perform any initialization it needs to before starting to run.
-        /// This is where it can query for any required services and load any non-graphic
-        /// related content.  Calling base.Initialize will enumerate through any components
-        /// and initialize them as well.
-        /// </summary>
         protected override void Initialize()
         {
-            serverConnection = new HubConnection("http://localhost:12719/");
+            serverConnection = new HubConnection("https://casualgamesjjjn.azurewebsites.net"); //"http://localhost:12719/");
             serverConnection.StateChanged += ServerConnection_StateChanged;
             proxy = serverConnection.CreateHubProxy("GameHub");
             serverConnection.Start();
@@ -68,10 +59,30 @@ namespace MonoGameClient
             }
         }
 
-        /// <summary>
-        /// LoadContent will be called once per game and is the place to load
-        /// all of your content.
-        /// </summary>
+        private void startGame()
+        {
+            // Immediate Pattern...
+            proxy.Invoke<PlayerData>("Join")
+                .ContinueWith( // This processes the message, it returns the async invoke call...
+                (p) =>
+                { // With p do...
+                    if (p.Result == null)
+                        connectionMessage = "No player data returned";
+                    else
+                    {
+                        CreatePlayer(p.Result);
+                        // This means we are creating our player using the image name in PlayerData...
+                        // uses the PlayerData packet to choose the image...
+                        // we use a simpleSpritePlayer...
+                    }
+                });
+        }
+
+        private void CreatePlayer(PlayerData result)
+        {
+
+        }
+
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
@@ -80,20 +91,11 @@ namespace MonoGameClient
             // TODO: use this.Content to load your game content here
         }
 
-        /// <summary>
-        /// UnloadContent will be called once per game and is the place to unload
-        /// game-specific content.
-        /// </summary>
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
         }
 
-        /// <summary>
-        /// Allows the game to run logic such as updating the world,
-        /// checking for collisions, gathering input, and playing audio.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
@@ -104,10 +106,6 @@ namespace MonoGameClient
             base.Update(gameTime);
         }
 
-        /// <summary>
-        /// This is called when the game should draw itself.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);

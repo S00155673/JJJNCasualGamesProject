@@ -21,12 +21,5 @@ namespace CommonDataItems
         public int XP;
         public Position playerPosition;
         public string Password;
-
-
-
-
-
-
-
     }
 }
