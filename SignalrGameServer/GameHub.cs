@@ -2,6 +2,7 @@
 using Microsoft.AspNet.SignalR;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SignalrGameServer
 {
@@ -56,5 +57,20 @@ namespace SignalrGameServer
             }
             return null;
         }
+
+        public void Moved(string playerID, Position newPosition)
+        {
+            // Update the collection with the new player position if it exists...
+            PlayerData found = Players.FirstOrDefault(p => p.playerID == playerID);
+
+            if (found != null)
+            {
+                // Update the server player position...
+                found.playerPosition = newPosition;
+                // Update clients that this player has moved...
+                Clients.Others.OtherMove(playerID, newPosition);
+            }
+        }
+
     }
 }
