@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/s00155673/Source/Repos/JJJNCasualGamesProject/MonoGameClient/Content/Message.spritefont</File>
+    <File>C:/Users/s00155673/Source/Repos/JJJNCasualGamesProject/MonoGameClient/Content/Player 1.png</File>
+    <File>C:/Users/s00155673/Source/Repos/JJJNCasualGamesProject/MonoGameClient/Content/Player 2.png</File>
+    <File>C:/Users/s00155673/Source/Repos/JJJNCasualGamesProject/MonoGameClient/Content/Player 3.png</File>
+    <File>C:/Users/s00155673/Source/Repos/JJJNCasualGamesProject/MonoGameClient/Content/Player 4.png</File>
+  </SourceFiles>
+</SourceFileCollection>

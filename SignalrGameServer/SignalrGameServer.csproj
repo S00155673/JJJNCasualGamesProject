@@ -100,6 +100,8 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Properties\PublishProfiles\CasualGamesJJJN - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\CasualGamesJJJN - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -125,6 +127,9 @@
       <Project>{7cee6206-755d-4438-aba3-e1f90e20b757}</Project>
       <Name>CommonDataItems</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

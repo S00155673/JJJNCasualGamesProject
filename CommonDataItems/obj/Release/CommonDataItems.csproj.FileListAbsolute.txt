@@ -1,0 +1,4 @@
+C:\Users\s00155673\Source\Repos\JJJNCasualGamesProject\CommonDataItems\bin\Release\CommonDataItems.dll
+C:\Users\s00155673\Source\Repos\JJJNCasualGamesProject\CommonDataItems\bin\Release\CommonDataItems.pdb
+C:\Users\s00155673\Source\Repos\JJJNCasualGamesProject\CommonDataItems\obj\Release\CommonDataItems.dll
+C:\Users\s00155673\Source\Repos\JJJNCasualGamesProject\CommonDataItems\obj\Release\CommonDataItems.pdb
