@@ -34,8 +34,7 @@ namespace MonoGameClient.GameObjects
                 startPosition.X, 
                 startPosition.Y, 
                 Image.Width, 
-                Image.Height); 
-        }
+                Image.Height);        }
 
         public override void Update(GameTime gameTime)
         {

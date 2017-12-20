@@ -23,6 +23,7 @@ namespace MonoGameClient.GameObjects
         public PlayerData pData;
         public Point previousPosition;
         public Color tint = Color.White;
+        public TimeSpan delay = new TimeSpan(0, 0, 1);
 
         // The constructor expects a loaded texture and a start pos...
         public PlayerSprite(Game game, PlayerData data, Texture2D spriteImage,Point startPosition) :base(game)
@@ -54,9 +55,12 @@ namespace MonoGameClient.GameObjects
             if (InputEngine.IsKeyHeld(Keys.Right))
                 Position += new Point(speed, 0);
 
+            //Prevents traffic going up to the server, better for performance...
+            delay -= gameTime.ElapsedGameTime;
             // If Player moves pull back the proxy reference and send a message to the Gamehub...
             if (Position != previousPosition)
             {
+                delay = new TimeSpan(0, 0, 1);
                 pData.playerPosition = new Position { X = Position.X, Y = Position.Y };
                 IHubProxy proxy = Game.Services.GetService<IHubProxy>();
                 proxy.Invoke("Moved", new Object[]
