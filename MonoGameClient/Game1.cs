@@ -6,6 +6,8 @@ using Microsoft.Xna.Framework.Input;
 using CommonDataItems;
 using System.Collections.Generic;
 using MonoGameClient.GameObjects;
+using Engine.Engines;
+using GameComponentNS;
 
 namespace MonoGameClient
 { 
@@ -30,6 +32,9 @@ namespace MonoGameClient
 
         protected override void Initialize()
         {
+            new InputEngine(this);
+            new FadeTextManager(this);
+
             serverConnection = new HubConnection("https://casualgamesjjjn.azurewebsites.net");
             //Use this if you want to test Locally...
             // serverConnection = new HubConnection ("http://localhost:12719/");
@@ -86,6 +91,7 @@ namespace MonoGameClient
             // Create the incoming players sprite...
             new OtherPlayer(this, otherPlayerData, Content.Load<Texture2D>(otherPlayerData.imageName),
             new Point(otherPlayerData.playerPosition.X, otherPlayerData.playerPosition.Y));
+            new FadeText(this, Vector2.Zero, otherPlayerData.GamerTag + " has joined the game");
         }
 
         private void ServerConnection_StateChanged(StateChange State)
@@ -133,7 +139,9 @@ namespace MonoGameClient
         {
             // Create an other player sprites in this client afte
             new PlayerSprite(this, player, Content.Load<Texture2D>(player.imageName),new Point(player.playerPosition.X, player.playerPosition.Y));
-            connectionMessage = player.playerID + " created ";
+            new FadeText(this, Vector2.Zero, "Welcome " + player.GamerTag + " your assigned to " + player.imageName);
+            //connectionMessage = player.playerID + " created ";
+
         }
 
         protected override void LoadContent()
@@ -141,6 +149,7 @@ namespace MonoGameClient
             spriteBatch = new SpriteBatch(GraphicsDevice);
             Services.AddService(spriteBatch);
             font = Content.Load<SpriteFont>("Message");
+            Services.AddService<SpriteFont>(font);
    
         }
 
