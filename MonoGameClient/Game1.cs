@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Input;
 using CommonDataItems;
 using System.Collections.Generic;
 using MonoGameClient.GameObjects;
+using Engine.Engines;
 
 namespace MonoGameClient
 { 
@@ -30,6 +31,8 @@ namespace MonoGameClient
 
         protected override void Initialize()
         {
+            new InputEngine(this);
+
             serverConnection = new HubConnection("https://casualgamesjjjn.azurewebsites.net");
             //Use this if you want to test Locally...
             // serverConnection = new HubConnection ("http://localhost:12719/");
