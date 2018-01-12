@@ -182,3 +182,5 @@ C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Window
 C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\bgnofont.xnb
 C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\keyboardfont.xnb
 C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\PlayGame.xnb
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\GameMusic.wma
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\GameMusic.xnb

@@ -108,6 +108,7 @@
   <ItemGroup>
     <Content Include="Content\AsteroidBlaster.png" />
     <Content Include="Content\bgnofont.png" />
+    <Content Include="Content\GameMusic.mp3" />
     <Content Include="Content\PlayGame.png" />
     <Content Include="Icon.ico" />
     <Content Include="Scripts\jquery-1.6.4-vsdoc.js" />

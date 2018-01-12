@@ -111,3 +111,9 @@
 /processorParam:TextureFormat=Color
 /build:PlayGame.png
 
+#begin GameMusic.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:GameMusic.mp3
+

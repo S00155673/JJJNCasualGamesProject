@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using MonoGameClient.GameObjects;
 using Engine.Engines;
 using GameComponentNS;
+using Microsoft.Xna.Framework.Media;
 
 namespace MonoGameClient
 {
@@ -208,8 +209,13 @@ namespace MonoGameClient
             bg = Content.Load<Texture2D>("AsteroidBlaster");
             bgNoFont = Content.Load<Texture2D>("bgnofont");
             playgameText = Content.Load<Texture2D>("PlayGame");
+
+
             playGameButton = new Button(new Rectangle(280, 300, playgameText.Width, playgameText.Height), true);
             playGameButton.load(Content, "PlayGame");
+
+            Song bgMusic = Content.Load<Song>("GameMusic");
+            MediaPlayer.Play(bgMusic);
         }
 
         protected override void UnloadContent()
