@@ -7,3 +7,8 @@ C:\Users\s00155673\Source\Repos\JJJNCasualGamesProject\CommonDataItems\bin\Debug
 C:\Users\s00155673\Source\Repos\JJJNCasualGamesProject\CommonDataItems\obj\Debug\CommonDataItems.csprojResolveAssemblyReference.cache
 C:\Users\s00155673\Source\Repos\JJJNCasualGamesProject\CommonDataItems\obj\Debug\CommonDataItems.dll
 C:\Users\s00155673\Source\Repos\JJJNCasualGamesProject\CommonDataItems\obj\Debug\CommonDataItems.pdb
+C:\Users\s00159718\Source\Repos\JJJNCasualGamesProject\CommonDataItems\bin\Debug\CommonDataItems.dll
+C:\Users\s00159718\Source\Repos\JJJNCasualGamesProject\CommonDataItems\bin\Debug\CommonDataItems.pdb
+C:\Users\s00159718\Source\Repos\JJJNCasualGamesProject\CommonDataItems\obj\Debug\CommonDataItems.csprojResolveAssemblyReference.cache
+C:\Users\s00159718\Source\Repos\JJJNCasualGamesProject\CommonDataItems\obj\Debug\CommonDataItems.dll
+C:\Users\s00159718\Source\Repos\JJJNCasualGamesProject\CommonDataItems\obj\Debug\CommonDataItems.pdb

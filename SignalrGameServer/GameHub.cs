@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+using System.Drawing;
+
 namespace SignalrGameServer
 {
     public class GameHub : Hub
@@ -71,6 +73,5 @@ namespace SignalrGameServer
                 Clients.Others.OtherMove(playerID, newPosition);
             }
         }
-
     }
 }

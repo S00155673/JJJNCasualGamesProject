@@ -18,6 +18,15 @@ namespace MonoGameClient
         string connectionMessage = string.Empty;
         SpriteFont font;
 
+        Texture2D background;
+        Texture2D bolt;
+
+        Game thisGame;
+
+        //Collectable[] collectableArray;
+
+        //Position aPosition = new Position(100, 200);
+
         // The Signalr Client objects
         HubConnection serverConnection;
         IHubProxy proxy;
@@ -35,9 +44,9 @@ namespace MonoGameClient
             new InputEngine(this);
             new FadeTextManager(this);
 
-            serverConnection = new HubConnection("https://casualgamesjjjn.azurewebsites.net");
+            //serverConnection = new HubConnection("https://casualgamesjjjn.azurewebsites.net");
             //Use this if you want to test Locally...
-            // serverConnection = new HubConnection ("http://localhost:12719/");
+            serverConnection = new HubConnection("http://localhost:12719/");
             serverConnection.StateChanged += ServerConnection_StateChanged;
             proxy = serverConnection.CreateHubProxy("GameHub");
             serverConnection.Start();
@@ -50,6 +59,8 @@ namespace MonoGameClient
 
             Action<string, Position> otherMove = otherMovedClient;
             proxy.On<string, Position>("OtherMove", otherMove);
+
+            //collectableArray[0] = new Collectable(thisGame, bolt, );
 
             // Add the proxy client as a Game service o components can send messages 
             Services.AddService<IHubProxy>(proxy);
@@ -150,7 +161,8 @@ namespace MonoGameClient
             Services.AddService(spriteBatch);
             font = Content.Load<SpriteFont>("Message");
             Services.AddService<SpriteFont>(font);
-   
+            background = Content.Load<Texture2D>("Background");
+            bolt = Content.Load<Texture2D>("bolt");
         }
 
         protected override void UnloadContent()
@@ -160,7 +172,7 @@ namespace MonoGameClient
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+                Exit(); 
 
             // TODO: Add your update logic here
 
@@ -171,6 +183,11 @@ namespace MonoGameClient
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
+            spriteBatch.Draw(background, new Vector2(0, 0), Color.White);
+            //foreach(Collectable e in collectableArray)
+            //{
+            //    e.Draw(gameTime);
+            //}
             //Draw the Connection Message...
             spriteBatch.DrawString(font, connectionMessage, new Vector2(10, 10), Color.White);
             spriteBatch.End();

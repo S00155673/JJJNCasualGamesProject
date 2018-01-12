@@ -18,7 +18,7 @@ namespace MonoGameClient.GameObjects
         public Texture2D Image;
         public Point Position;
         public Rectangle BoundingRect;
-        public bool Visible = true;      
+        public bool Visible = true;
         public int speed = 5;
         public PlayerData pData;
         public Point previousPosition;
