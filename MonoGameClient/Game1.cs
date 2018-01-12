@@ -45,6 +45,9 @@ namespace MonoGameClient
             Action<PlayerData> joined = clientJoined;
             proxy.On<PlayerData>("Joined", joined);
 
+            //Action<PlayerData> left = clientLeft;
+            //proxy.Invoke<PlayerData>("Left", left);
+
             Action<List<PlayerData>> currentPlayers = clientPlayers;
             proxy.On<List<PlayerData>>("CurrentPlayers", currentPlayers);
 
@@ -94,6 +97,11 @@ namespace MonoGameClient
             new FadeText(this, Vector2.Zero, otherPlayerData.GamerTag + " has joined the game");
         }
 
+        //private void clientLeft(PlayerData otherPlayerData)
+        //{
+            
+        //}
+
         private void ServerConnection_StateChanged(StateChange State)
         {
             switch (State.NewState)
@@ -107,7 +115,7 @@ namespace MonoGameClient
                     connectionMessage = "Disconnected...";
                     if (State.OldState == ConnectionState.Connected)
                         connectionMessage = "Lost connection...";
-                    Connected = false;  
+                    Connected = false;
                     break;
                 case ConnectionState.Connecting:
                     connectionMessage = "Connecting...";
@@ -135,6 +143,11 @@ namespace MonoGameClient
                 });
         }
 
+        //private void LeaveGame()
+        //{
+        //    proxy.Invoke<PlayerData>("Left");
+        //}
+
         private void CreatePlayer(PlayerData player)
         {
             // Create an other player sprites in this client afte
@@ -160,8 +173,9 @@ namespace MonoGameClient
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+                //LeaveGame();
                 Exit();
-
+            
             // TODO: Add your update logic here
 
             base.Update(gameTime);

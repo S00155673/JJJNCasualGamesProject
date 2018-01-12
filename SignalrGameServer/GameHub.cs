@@ -58,6 +58,29 @@ namespace SignalrGameServer
             return null;
         }
 
+        //This method is to be used for when a player leaves...
+        //public void Left(PlayerData playerData)
+        //{
+        //    if (characters.Count >= 1)
+        //    {
+        //        if (RegisteredPlayers.Count >= 1)
+        //        {
+        //            RegisteredPlayers.Enqueue(playerData);
+        //            characters.Push(playerData.imageName);
+        //            Clients.Others.Left(playerData);
+        //            Players.Remove(playerData);
+        //            Clients.Caller.CurrentPlayers(Players);
+        //        }
+        //    }
+
+        //    //RegisteredPlayers.Enqueue(playerData);
+        //    ////Pushes the player...
+        //    //characters.Push(playerData.imageName);
+        //    //Clients.Others.Left(playerData);
+        //    ////Remove the player on the server...
+        //    //Players.Remove(playerData);
+        //}
+
         public void Moved(string playerID, Position newPosition)
         {
             // Update the collection with the new player position if it exists...
