@@ -10,7 +10,7 @@ namespace SignalrGameServer
     {
         // static is used to protect the data acros diffrent hub invocations...
         // a queue of RegisteredPlayers...
-        public static Queue<PlayerData> RegisteredPlayers = new Queue<PlayerData>(new PlayerData[]
+        public  Queue<PlayerData> RegisteredPlayers = new Queue<PlayerData>(new PlayerData[]
         {
             new PlayerData { GamerTag = "Jordan Davies", imageName = "", playerID = Guid.NewGuid().ToString(), XP = 50 },
             new PlayerData { GamerTag = "Jonny Reed", imageName = "", playerID = Guid.NewGuid().ToString(), XP = 40 },
@@ -59,27 +59,29 @@ namespace SignalrGameServer
         }
 
         //This method is to be used for when a player leaves...
-        //public void Left(PlayerData playerData)
-        //{
-        //    if (characters.Count >= 1)
-        //    {
-        //        if (RegisteredPlayers.Count >= 1)
-        //        {
-        //            RegisteredPlayers.Enqueue(playerData);
-        //            characters.Push(playerData.imageName);
-        //            Clients.Others.Left(playerData);
-        //            Players.Remove(playerData);
-        //            Clients.Caller.CurrentPlayers(Players);
-        //        }
-        //    }
+        public void Left(PlayerData playerData)
+        {
+            if (characters.Count >= 1)
+            {
+                characters.Push(playerData.imageName);
 
-        //    //RegisteredPlayers.Enqueue(playerData);
-        //    ////Pushes the player...
-        //    //characters.Push(playerData.imageName);
-        //    //Clients.Others.Left(playerData);
-        //    ////Remove the player on the server...
-        //    //Players.Remove(playerData);
-        //}
+                if (RegisteredPlayers.Count >= 1)
+                {
+                    RegisteredPlayers.Enqueue(playerData);
+                    
+                    Clients.Others.Left(playerData);
+                    Clients.Caller.CurrentPlayers(Players);
+                    Players.Remove(playerData);
+                }
+            }
+
+            //RegisteredPlayers.Enqueue(playerData);
+            ////Pushes the player...
+            //characters.Push(playerData.imageName);
+            //Clients.Others.Left(playerData);
+            ////Remove the player on the server...
+            //Players.Remove(playerData);
+        }
 
         public void Moved(string playerID, Position newPosition)
         {

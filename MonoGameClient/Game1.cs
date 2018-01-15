@@ -21,6 +21,7 @@ namespace MonoGameClient
         // The Signalr Client objects
         HubConnection serverConnection;
         IHubProxy proxy;
+        private PlayerData pdata;
 
         public bool Connected { get; set; }
 
@@ -45,16 +46,13 @@ namespace MonoGameClient
             Action<PlayerData> joined = clientJoined;
             proxy.On<PlayerData>("Joined", joined);
 
-            //Action<PlayerData> left = clientLeft;
-            //proxy.Invoke<PlayerData>("Left", left);
-
             Action<List<PlayerData>> currentPlayers = clientPlayers;
             proxy.On<List<PlayerData>>("CurrentPlayers", currentPlayers);
 
             Action<string, Position> otherMove = otherMovedClient;
             proxy.On<string, Position>("OtherMove", otherMove);
 
-            // Add the proxy client as a Game service o components can send messages 
+            // Add the proxy client as a Game service so components can send messages 
             Services.AddService<IHubProxy>(proxy);
 
             base.Initialize();
@@ -71,7 +69,7 @@ namespace MonoGameClient
                     p.opData.playerPosition = newPosition;
                     p.Position = new Point(p.opData.playerPosition.X, p.opData.playerPosition.Y);
                     break; 
-                    //Break out of the only one player position is updated and its found...                    
+                    //Break out when only one player position is updated and its found...                    
                 }
             }
         }
@@ -97,17 +95,13 @@ namespace MonoGameClient
             new FadeText(this, Vector2.Zero, otherPlayerData.GamerTag + " has joined the game");
         }
 
-        //private void clientLeft(PlayerData otherPlayerData)
-        //{
-            
-        //}
-
         private void ServerConnection_StateChanged(StateChange State)
         {
             switch (State.NewState)
             {
                 case ConnectionState.Connected:
-                    connectionMessage = "Connected...";
+                    //connectionMessage = "Connected...";
+                    new FadeText(this,Vector2.Zero, "Connected...");
                     Connected = true;
                     startGame();
                     break;
@@ -143,18 +137,18 @@ namespace MonoGameClient
                 });
         }
 
-        //private void LeaveGame()
-        //{
-        //    proxy.Invoke<PlayerData>("Left");
-        //}
+        private void LeaveGame()
+        {
+            proxy.Invoke<PlayerData>("Left", new object[] {pdata.GamerTag});
+        }
 
         private void CreatePlayer(PlayerData player)
         {
+            pdata = player;
             // Create an other player sprites in this client afte
             new PlayerSprite(this, player, Content.Load<Texture2D>(player.imageName),new Point(player.playerPosition.X, player.playerPosition.Y));
             new FadeText(this, Vector2.Zero, "Welcome " + player.GamerTag + " your assigned to " + player.imageName);
             //connectionMessage = player.playerID + " created ";
-
         }
 
         protected override void LoadContent()
@@ -173,8 +167,10 @@ namespace MonoGameClient
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                //LeaveGame();
+            {
+                LeaveGame();
                 Exit();
+            }
             
             // TODO: Add your update logic here
 
