@@ -16,8 +16,6 @@ namespace MonoGameClient
         bool available;
         Texture2D image;
 
-
-        //Constructor
         public Button()
         {
             posSize = new Rectangle(100, 100, 100, 50);
@@ -25,7 +23,6 @@ namespace MonoGameClient
             available = true;
         }
 
-        //OverLoaded Constructor
         public Button(Rectangle rec, bool avail)
         {
             posSize = rec;
@@ -33,13 +30,10 @@ namespace MonoGameClient
             clicked = false;
         }
 
-        //Load Content
         public void load(ContentManager content, string name)
         {
             image = content.Load<Texture2D>(name);
         }
-
-        //Update
         public bool update(Vector2 mouse)
         {
             if (mouse.X >= posSize.X && mouse.X <= posSize.X + posSize.Width && mouse.Y >= posSize.Y && mouse.Y <= posSize.Y + posSize.Height)
@@ -60,8 +54,6 @@ namespace MonoGameClient
             return clicked;
 
         }
-
-        //Draw
         public void draw(SpriteBatch sp)
         {
 
@@ -81,8 +73,6 @@ namespace MonoGameClient
 
         }
 
-
-        //Getters and Setters
         public bool Clicked
         {
 

@@ -27,6 +27,8 @@ namespace MonoGameClient
         Texture2D bg;
         Texture2D bgNoFont;
 
+
+#region button and menu
         InputEngine input;
 
         //Creating button
@@ -34,7 +36,6 @@ namespace MonoGameClient
         Texture2D playgameText;
         MouseState mouseState, previousMouseState;
 
-       
         public static string password = string.Empty;
         bool firstText = false;
         public bool Done = false;
@@ -45,7 +46,7 @@ namespace MonoGameClient
         //variable so current screen is set to menu 
         public int CurrentScreen = MENU;
 
-        //Login Cariables
+        //Login Variables
         public static string name = string.Empty;
 
         public string Name
@@ -73,7 +74,7 @@ namespace MonoGameClient
             InputEngine.ClearState();
             Done = false;
         }
-
+#endregion
         public bool Connected { get; set; }
 
         public Game1()
@@ -91,7 +92,7 @@ namespace MonoGameClient
 
             serverConnection = new HubConnection("https://casualgamesjjjn.azurewebsites.net");
             //Use this if you want to test Locally...
-                //  serverConnection = new HubConnection("http://localhost:12719/");
+            //      serverConnection = new HubConnection("http://localhost:12719/");
             //serverConnection = new HubConnection("http://localhost:30791/");
             serverConnection.StateChanged += ServerConnection_StateChanged;
             proxy = serverConnection.CreateHubProxy("GameHub");
@@ -173,7 +174,6 @@ namespace MonoGameClient
 
         private void startGame()
         {
-
             // Immediate Pattern...
             proxy.Invoke<PlayerData>("Join")
                 .ContinueWith( // This processes the message, it returns the async invoke call...
@@ -206,30 +206,34 @@ namespace MonoGameClient
             Services.AddService(spriteBatch);
             font = Content.Load<SpriteFont>("Message");
             Services.AddService<SpriteFont>(font);
+
+            #region Load for background
             bg = Content.Load<Texture2D>("AsteroidBlaster");
             bgNoFont = Content.Load<Texture2D>("bgnofont");
+#endregion
+
+            #region Load for button
             playgameText = Content.Load<Texture2D>("PlayGame");
-
-
             playGameButton = new Button(new Rectangle(280, 300, playgameText.Width, playgameText.Height), true);
             playGameButton.load(Content, "PlayGame");
+            #endregion
 
+            #region Load for music
             Song bgMusic = Content.Load<Song>("GameMusic");
             MediaPlayer.Play(bgMusic);
+            #endregion
         }
 
         protected override void UnloadContent()
         {
         }
 
-
-      
-
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            #region starting in menu and switching to game
             //sets mouse state
             mouseState = Mouse.GetState();
 
@@ -270,8 +274,9 @@ namespace MonoGameClient
 
             // TODO: Add your update logic here
 
+            previousMouseState = mouseState;
+#endregion
             base.Update(gameTime);
-
         }
 
         protected override void Draw(GameTime gameTime)
@@ -289,7 +294,7 @@ namespace MonoGameClient
             spriteBatch.Begin();
             //Draw the Connection Message...
 
-
+#region switch for what we want to see
             switch (CurrentScreen)
             {
                 case MENU:
@@ -308,6 +313,7 @@ namespace MonoGameClient
 
             }
               spriteBatch.DrawString(font, connectionMessage, new Vector2(10, 10), Color.White);
+#endregion
             spriteBatch.End();
             base.Draw(gameTime);
         }
