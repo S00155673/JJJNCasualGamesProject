@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoGameClient.GameObjects
 {
-    class Collectable : DrawableGameComponent
+    public class Collectable : DrawableGameComponent
     {
         public Texture2D Image;
         public Point Position;
@@ -17,6 +17,7 @@ namespace MonoGameClient.GameObjects
 
         public Collectable(Game game, Texture2D image, Point position) : base(game)
         {
+            game.Components.Add(this);
             Image = image;
             Position = position;
             BoundingRect = new Rectangle(

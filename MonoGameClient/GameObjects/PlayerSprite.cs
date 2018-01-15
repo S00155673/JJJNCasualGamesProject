@@ -75,6 +75,19 @@ namespace MonoGameClient.GameObjects
                 Position.Y, 
                 Image.Width, 
                 Image.Height);
+
+            Collectable[] collisonArray = Game1.collectableArray;
+            if (collisonArray.Length > 0)
+            {
+                foreach (Collectable c in collisonArray)
+                {
+                    if (c.BoundingRect.Intersects(BoundingRect))
+                    {
+                        c.Visible = false;
+                    }
+                }
+            }
+
             base.Update(gameTime);
         }
 
