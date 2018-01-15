@@ -94,12 +94,8 @@ namespace MonoGameClient
 
             serverConnection = new HubConnection("https://casualgamesjjjn.azurewebsites.net");
             //Use this if you want to test Locally...
-<<<<<<< HEAD
-            //      serverConnection = new HubConnection("http://localhost:12719/");
-            //serverConnection = new HubConnection("http://localhost:30791/");
-=======
-            //serverConnection = new HubConnection ("http://localhost:12719/");
->>>>>>> Jordan-Davies
+            //serverConnection = new HubConnection("http://localhost:12719/");
+
             serverConnection.StateChanged += ServerConnection_StateChanged;
             proxy = serverConnection.CreateHubProxy("GameHub");
             serverConnection.Start();
@@ -143,13 +139,8 @@ namespace MonoGameClient
                     OtherPlayer p = ((OtherPlayer)player);
                     p.opData.playerPosition = newPosition;
                     p.Position = new Point(p.opData.playerPosition.X, p.opData.playerPosition.Y);
-<<<<<<< HEAD
                     break;
                     //Break out of the only one player position is updated and its found...                    
-=======
-                    break; 
-                    //Break out when only one player position is updated and its found...                    
->>>>>>> Jordan-Davies
                 }
             }
         }
@@ -224,16 +215,10 @@ namespace MonoGameClient
 
         private void CreatePlayer(PlayerData player)
         {
-<<<<<<< HEAD
-            // Create an other player sprites in this client after
-            new PlayerSprite(this, player, Content.Load<Texture2D>(player.imageName), new Point(player.playerPosition.X, player.playerPosition.Y));
-            new FadeText(this, Vector2.Zero, "Welcome " + Name + " your assigned to " + player.imageName);
-=======
             pdata = player;
             // Create an other player sprites in this client afte
             new PlayerSprite(this, player, Content.Load<Texture2D>(player.imageName),new Point(player.playerPosition.X, player.playerPosition.Y));
             new FadeText(this, Vector2.Zero, "Welcome " + player.GamerTag + " your assigned to " + player.imageName);
->>>>>>> Jordan-Davies
             //connectionMessage = player.playerID + " created ";
         }
 
@@ -271,51 +256,46 @@ namespace MonoGameClient
             {
                 LeaveGame();
                 Exit();
-<<<<<<< HEAD
 
-            #region starting in menu and switching to game
-            //sets mouse state
-            mouseState = Mouse.GetState();
+                #region starting in menu and switching to game
+                //sets mouse state
+                mouseState = Mouse.GetState();
 
-            //switch for setting the scene
-            switch (CurrentScreen)
-            {
-                case MENU:
-                    //What we want to happen in the MENU screen goes in here.
-                    //GO TO PLAYGAME SCREEN
+                //switch for setting the scene
+                switch (CurrentScreen)
+                {
+                    case MENU:
+                        //What we want to happen in the MENU screen goes in here.
+                        //GO TO PLAYGAME SCREEN
 
-                    if (playGameButton.update(new Vector2(mouseState.X, mouseState.Y)) == true && mouseState != previousMouseState && mouseState.LeftButton == ButtonState.Pressed && !firstText && !Done)
-                    {
+                        if (playGameButton.update(new Vector2(mouseState.X, mouseState.Y)) == true && mouseState != previousMouseState && mouseState.LeftButton == ButtonState.Pressed && !firstText && !Done)
+                        {
 
-                        Name = Output;
-                        Output = string.Empty;
-                        firstText = true;
-                        InputEngine.ClearState();
-                        CurrentScreen = PLAYGAME;
-                    }
+                            Name = Output;
+                            Output = string.Empty;
+                            firstText = true;
+                            InputEngine.ClearState();
+                            CurrentScreen = PLAYGAME;
+                        }
 
-                    if (InputEngine.IsKeyPressed(Keys.Enter) && firstText && !Done)
-                    {
-                        Output = string.Empty;
-                        Done = true;
-                    }
-                    if (InputEngine.IsKeyPressed(Keys.Back))
-                        if (Output.Length > 0)
-                            Output = Output.Remove(Output.Length - 1);
-                    if (InputEngine.IsKeyPressed(Keys.Space))
-                        Output += " ";
-                    break;
+                        if (InputEngine.IsKeyPressed(Keys.Enter) && firstText && !Done)
+                        {
+                            Output = string.Empty;
+                            Done = true;
+                        }
+                        if (InputEngine.IsKeyPressed(Keys.Back))
+                            if (Output.Length > 0)
+                                Output = Output.Remove(Output.Length - 1);
+                        if (InputEngine.IsKeyPressed(Keys.Space))
+                            Output += " ";
+                        break;
 
-                case PLAYGAME:
-                    //What we want to happen when we play our GAME goes in here.               
-                    startGame();
-                    break;
+                    case PLAYGAME:
+                        //What we want to happen when we play our GAME goes in here.               
+                        startGame();
+                        break;
+                }
             }
-
-=======
-            }
-            
->>>>>>> Jordan-Davies
             // TODO: Add your update logic here
 
             previousMouseState = mouseState;

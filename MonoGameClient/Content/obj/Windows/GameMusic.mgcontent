@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/nnult/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/GameMusic.mp3</SourceFile>
-  <SourceTime>2018-01-12T13:50:39.6650553+00:00</SourceTime>
-  <DestFile>C:/Users/nnult/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/bin/Windows/GameMusic.xnb</DestFile>
-  <DestTime>2018-01-12T13:51:15.3201248+00:00</DestTime>
+  <SourceFile>C:/Users/Owned/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/GameMusic.mp3</SourceFile>
+  <SourceTime>2018-01-15T15:08:50.9919475+00:00</SourceTime>
+  <DestFile>C:/Users/Owned/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/bin/Windows/GameMusic.xnb</DestFile>
+  <DestTime>2018-01-15T15:11:55.7153634+00:00</DestTime>
   <Importer>Mp3Importer</Importer>
   <ImporterTime>2017-03-01T15:05:36+00:00</ImporterTime>
   <Processor>SongProcessor</Processor>
@@ -15,6 +15,6 @@
   <Dependencies />
   <BuildAsset />
   <BuildOutput>
-    <string>C:/Users/nnult/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/bin/Windows/GameMusic.wma</string>
+    <string>C:/Users/Owned/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/bin/Windows/GameMusic.wma</string>
   </BuildOutput>
 </PipelineBuildEvent>

@@ -4,15 +4,15 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/nnult/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/Message.spritefont</File>
-    <File>C:/Users/nnult/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/Player 1.png</File>
-    <File>C:/Users/nnult/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/Player 2.png</File>
-    <File>C:/Users/nnult/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/Player 3.png</File>
-    <File>C:/Users/nnult/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/Player 4.png</File>
-    <File>C:/Users/nnult/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/AsteroidBlaster.png</File>
-    <File>C:/Users/nnult/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/bgnofont.png</File>
-    <File>C:/Users/nnult/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/keyboardfont.spritefont</File>
-    <File>C:/Users/nnult/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/PlayGame.png</File>
-    <File>C:/Users/nnult/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/GameMusic.mp3</File>
+    <File>C:/Users/Owned/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/Message.spritefont</File>
+    <File>C:/Users/Owned/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/Player 1.png</File>
+    <File>C:/Users/Owned/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/Player 2.png</File>
+    <File>C:/Users/Owned/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/Player 3.png</File>
+    <File>C:/Users/Owned/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/Player 4.png</File>
+    <File>C:/Users/Owned/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/AsteroidBlaster.png</File>
+    <File>C:/Users/Owned/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/bgnofont.png</File>
+    <File>C:/Users/Owned/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/keyboardfont.spritefont</File>
+    <File>C:/Users/Owned/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/PlayGame.png</File>
+    <File>C:/Users/Owned/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/GameMusic.mp3</File>
   </SourceFiles>
 </SourceFileCollection>
