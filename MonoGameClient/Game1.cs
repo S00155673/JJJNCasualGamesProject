@@ -7,6 +7,7 @@ using CommonDataItems;
 using System.Collections.Generic;
 using MonoGameClient.GameObjects;
 using Engine.Engines;
+using System.Linq;
 using GameComponentNS;
 
 namespace MonoGameClient
@@ -38,7 +39,7 @@ namespace MonoGameClient
 
             serverConnection = new HubConnection("https://casualgamesjjjn.azurewebsites.net");
             //Use this if you want to test Locally...
-            // serverConnection = new HubConnection ("http://localhost:12719/");
+            //serverConnection = new HubConnection ("http://localhost:12719/");
             serverConnection.StateChanged += ServerConnection_StateChanged;
             proxy = serverConnection.CreateHubProxy("GameHub");
             serverConnection.Start();
@@ -49,6 +50,9 @@ namespace MonoGameClient
             Action<List<PlayerData>> currentPlayers = clientPlayers;
             proxy.On<List<PlayerData>>("CurrentPlayers", currentPlayers);
 
+            Action<PlayerData> playerHasLeft = otherLeft;
+            proxy.On<PlayerData>("Leaving", playerHasLeft);
+
             Action<string, Position> otherMove = otherMovedClient;
             proxy.On<string, Position>("OtherMove", otherMove);
 
@@ -56,6 +60,17 @@ namespace MonoGameClient
             Services.AddService<IHubProxy>(proxy);
 
             base.Initialize();
+        }
+
+        private void otherLeft(PlayerData obj)
+        {
+            //List<OtherPlayer> others = this.Components
+            //OtherPlayer playerGone = (OtherPlayer)this.Components.FirstOrDefault(c => c.GetType() == typeof(OtherPlayer));
+            OtherPlayer playerGone = (OtherPlayer)this.Components.FirstOrDefault(c => c.GetType() == typeof(OtherPlayer));
+            if (playerGone != null)
+            {
+               this.Components.Remove(playerGone);
+            }
         }
 
         private void otherMovedClient(string playerID, Position newPosition)
@@ -139,7 +154,7 @@ namespace MonoGameClient
 
         private void LeaveGame()
         {
-            proxy.Invoke<PlayerData>("Left", new object[] {pdata.GamerTag});
+            proxy.Invoke<PlayerData>("Leaving", new object[] {pdata});
         }
 
         private void CreatePlayer(PlayerData player)

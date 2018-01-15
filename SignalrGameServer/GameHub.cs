@@ -59,8 +59,10 @@ namespace SignalrGameServer
         }
 
         //This method is to be used for when a player leaves...
-        public void Left(PlayerData playerData)
+        public void Leaving(String  playerTag)
         {
+            PlayerData playerData = Players.FirstOrDefault(p => p.GamerTag == playerTag);
+
             if (characters.Count >= 1)
             {
                 characters.Push(playerData.imageName);
@@ -70,7 +72,7 @@ namespace SignalrGameServer
                     RegisteredPlayers.Enqueue(playerData);
                     
                     Clients.Others.Left(playerData);
-                    Clients.Caller.CurrentPlayers(Players);
+                                
                     Players.Remove(playerData);
                 }
             }

@@ -9,6 +9,5 @@ C:\Users\s00155673\Source\Repos\JJJNCasualGamesProject\CommonDataItems\obj\Debug
 C:\Users\s00155673\Source\Repos\JJJNCasualGamesProject\CommonDataItems\obj\Debug\CommonDataItems.pdb
 C:\Users\Owned\Documents\GitHub\JJJNCasualGamesProject\CommonDataItems\bin\Debug\CommonDataItems.dll
 C:\Users\Owned\Documents\GitHub\JJJNCasualGamesProject\CommonDataItems\bin\Debug\CommonDataItems.pdb
-C:\Users\Owned\Documents\GitHub\JJJNCasualGamesProject\CommonDataItems\obj\Debug\CommonDataItems.csprojResolveAssemblyReference.cache
 C:\Users\Owned\Documents\GitHub\JJJNCasualGamesProject\CommonDataItems\obj\Debug\CommonDataItems.dll
 C:\Users\Owned\Documents\GitHub\JJJNCasualGamesProject\CommonDataItems\obj\Debug\CommonDataItems.pdb
