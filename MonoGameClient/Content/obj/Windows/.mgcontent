@@ -4,10 +4,12 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Owned/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/Message.spritefont</File>
-    <File>C:/Users/Owned/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/Player 1.png</File>
-    <File>C:/Users/Owned/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/Player 2.png</File>
-    <File>C:/Users/Owned/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/Player 3.png</File>
-    <File>C:/Users/Owned/Documents/GitHub/JJJNCasualGamesProject/MonoGameClient/Content/Player 4.png</File>
+    <File>C:/Users/s00159718/Source/Repos/JJJNCasualGamesProject/MonoGameClient/Content/Message.spritefont</File>
+    <File>C:/Users/s00159718/Source/Repos/JJJNCasualGamesProject/MonoGameClient/Content/Player 1.png</File>
+    <File>C:/Users/s00159718/Source/Repos/JJJNCasualGamesProject/MonoGameClient/Content/Player 2.png</File>
+    <File>C:/Users/s00159718/Source/Repos/JJJNCasualGamesProject/MonoGameClient/Content/Player 3.png</File>
+    <File>C:/Users/s00159718/Source/Repos/JJJNCasualGamesProject/MonoGameClient/Content/Player 4.png</File>
+    <File>C:/Users/s00159718/Source/Repos/JJJNCasualGamesProject/MonoGameClient/Content/Background.png</File>
+    <File>C:/Users/s00159718/Source/Repos/JJJNCasualGamesProject/MonoGameClient/Content/bolt.png</File>
   </SourceFiles>
 </SourceFileCollection>

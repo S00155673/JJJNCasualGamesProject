@@ -18,7 +18,7 @@ namespace MonoGameClient.GameObjects
         public Texture2D Image;
         public Point Position;
         public Rectangle BoundingRect;
-        public bool Visible = true;      
+        public bool Visible = true;
         public int speed = 5;
         public PlayerData pData;
         public Point previousPosition;
@@ -75,6 +75,19 @@ namespace MonoGameClient.GameObjects
                 Position.Y, 
                 Image.Width, 
                 Image.Height);
+
+            Collectable[] collisonArray = Game1.collectableArray;
+            if (collisonArray.Length > 0)
+            {
+                foreach (Collectable c in collisonArray)
+                {
+                    if (c.BoundingRect.Intersects(BoundingRect))
+                    {
+                        c.Visible = false;
+                    }
+                }
+            }
+
             base.Update(gameTime);
         }
 

@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using MonoGameClient.GameObjects;
 using Engine.Engines;
 using GameComponentNS;
+using System.Timers;
 
 namespace MonoGameClient
 { 
@@ -17,6 +18,22 @@ namespace MonoGameClient
         SpriteBatch spriteBatch;
         string connectionMessage = string.Empty;
         SpriteFont font;
+
+        Texture2D background;
+
+        //Content for collectables
+        Texture2D bolt;
+        private static Collectable[] arrCollectableArray = new Collectable[4];
+        public static Collectable[] collectableArray
+        {
+            get
+            {
+                return arrCollectableArray;
+            }
+        }
+        Random randomNumber = new Random();
+        //Setting up a timer
+        Timer aTimer = new Timer();
 
         // The Signalr Client objects
         HubConnection serverConnection;
@@ -35,9 +52,9 @@ namespace MonoGameClient
             new InputEngine(this);
             new FadeTextManager(this);
 
-            serverConnection = new HubConnection("https://casualgamesjjjn.azurewebsites.net");
+            //serverConnection = new HubConnection("https://casualgamesjjjn.azurewebsites.net");
             //Use this if you want to test Locally...
-            // serverConnection = new HubConnection ("http://localhost:12719/");
+            serverConnection = new HubConnection("http://localhost:12719/");
             serverConnection.StateChanged += ServerConnection_StateChanged;
             proxy = serverConnection.CreateHubProxy("GameHub");
             serverConnection.Start();
@@ -50,6 +67,11 @@ namespace MonoGameClient
 
             Action<string, Position> otherMove = otherMovedClient;
             proxy.On<string, Position>("OtherMove", otherMove);
+
+            aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+            //The OnTimedEvent will trigger after the below amount of milliseconds
+            aTimer.Interval = 3000;
+            aTimer.Enabled = true;
 
             // Add the proxy client as a Game service o components can send messages 
             Services.AddService<IHubProxy>(proxy);
@@ -150,11 +172,40 @@ namespace MonoGameClient
             Services.AddService(spriteBatch);
             font = Content.Load<SpriteFont>("Message");
             Services.AddService<SpriteFont>(font);
-   
+            background = Content.Load<Texture2D>("Background");
+            bolt = Content.Load<Texture2D>("bolt");
+
+            int randomPositionX = randomNumber.Next(-180, 501);
+            int randomPositionY = randomNumber.Next(-180, 201);
+            int current = 0;
+            foreach (Collectable c in collectableArray)
+            {
+                Position aPosition = new Position { X = randomPositionX, Y = randomPositionY };
+                collectableArray[current] = new Collectable(this, bolt, new Point(aPosition.X, aPosition.Y));
+                current += 1;
+            }
         }
 
         protected override void UnloadContent()
         {
+        }
+
+        private void OnTimedEvent(object source, ElapsedEventArgs e)
+        {
+            createCollectables();
+        }
+
+        public void createCollectables()
+        {
+            int randomPositionX = randomNumber.Next(-200, 501);
+            int randomPositionY = randomNumber.Next(-200, 201);
+            int current = 0;
+            foreach (Collectable c in collectableArray)
+            {
+                Position aPosition = new Position { X = randomPositionX, Y = randomPositionY };
+                collectableArray[current] = new Collectable(this, bolt, new Point(aPosition.X, aPosition.Y));
+                current += 1;
+            }
         }
 
         protected override void Update(GameTime gameTime)
@@ -162,15 +213,16 @@ namespace MonoGameClient
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
+            // TODO: Add your update logic here         
 
-            base.Update(gameTime);
+                base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
+            spriteBatch.Draw(background, new Vector2(0, 0), Color.White);
             //Draw the Connection Message...
             spriteBatch.DrawString(font, connectionMessage, new Vector2(10, 10), Color.White);
             spriteBatch.End();

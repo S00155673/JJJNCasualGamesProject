@@ -10,6 +10,7 @@ namespace CommonDataItems
     {
         public int X;
         public int Y;
+                
     }
 
     public class PlayerData
