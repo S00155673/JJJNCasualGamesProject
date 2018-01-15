@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/s00159718/Source/Repos/JJJNCasualGamesProject/MonoGameClient/Content/Message.spritefont</SourceFile>
-  <SourceTime>2018-01-11T13:39:35.3024643+00:00</SourceTime>
-  <DestFile>C:/Users/s00159718/Source/Repos/JJJNCasualGamesProject/MonoGameClient/Content/bin/Windows/Message.xnb</DestFile>
-  <DestTime>2018-01-15T13:48:43.1848188+00:00</DestTime>
+  <SourceFile>G:/January15/MonoGameClient/Content/Message.spritefont</SourceFile>
+  <SourceTime>2018-01-15T14:42:14+00:00</SourceTime>
+  <DestFile>G:/January15/MonoGameClient/Content/bin/Windows/Message.xnb</DestFile>
+  <DestTime>2018-01-15T14:44:44+00:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2017-03-01T15:05:36+00:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

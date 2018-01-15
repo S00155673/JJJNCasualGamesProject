@@ -52,9 +52,9 @@ namespace MonoGameClient
             new InputEngine(this);
             new FadeTextManager(this);
 
-            //serverConnection = new HubConnection("https://casualgamesjjjn.azurewebsites.net");
+            serverConnection = new HubConnection("https://casualgamesjjjn.azurewebsites.net");
             //Use this if you want to test Locally...
-            serverConnection = new HubConnection("http://localhost:12719/");
+            //serverConnection = new HubConnection("http://localhost:12719/");
             serverConnection.StateChanged += ServerConnection_StateChanged;
             proxy = serverConnection.CreateHubProxy("GameHub");
             serverConnection.Start();

@@ -179,3 +179,51 @@ C:\Users\s00159718\Source\Repos\JJJNCasualGamesProject\MonoGameClient\bin\Window
 C:\Users\s00159718\Source\Repos\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
 C:\Users\s00159718\Source\Repos\JJJNCasualGamesProject\MonoGameClient\obj\x86\Debug\MonoGameClient.csprojResolveAssemblyReference.cache
 C:\Users\s00159718\Source\Repos\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\bolt.xnb
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\MonoGameClient.exe.config
+G:\January15\MonoGameClient\obj\x86\Debug\MonoGameClient.exe
+G:\January15\MonoGameClient\obj\x86\Debug\MonoGameClient.pdb
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Content\Message.xnb
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Content\Player 1.xnb
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Content\Player 2.xnb
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Content\Player 3.xnb
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Content\Player 4.xnb
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Content\bolt.xnb
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Content\Background.xnb
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\MonoGameClient.exe
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\MonoGameClient.pdb
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\CommonDataItems.dll
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Microsoft.AspNet.SignalR.Client.dll
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Microsoft.AspNet.SignalR.Core.dll
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Microsoft.Owin.dll
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Microsoft.Owin.Host.SystemWeb.dll
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Microsoft.Owin.Security.dll
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\MonoGame.Framework.dll
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Newtonsoft.Json.dll
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Owin.dll
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\SharpDX.dll
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\SharpDX.XInput.dll
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\CommonDataItems.pdb
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Microsoft.AspNet.SignalR.Client.xml
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Microsoft.AspNet.SignalR.Core.xml
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Microsoft.Owin.xml
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Microsoft.Owin.Host.SystemWeb.xml
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Microsoft.Owin.Security.xml
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\MonoGame.Framework.xml
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\Newtonsoft.Json.xml
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\SharpDX.xml
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\SharpDX.XInput.xml
+G:\January15\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+G:\January15\MonoGameClient\obj\x86\Debug\MonoGameClient.csprojResolveAssemblyReference.cache

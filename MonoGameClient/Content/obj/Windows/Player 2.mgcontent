@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/s00159718/Source/Repos/JJJNCasualGamesProject/MonoGameClient/Content/Player 2.png</SourceFile>
-  <SourceTime>2018-01-11T13:39:35.3064842+00:00</SourceTime>
-  <DestFile>C:/Users/s00159718/Source/Repos/JJJNCasualGamesProject/MonoGameClient/Content/bin/Windows/Player 2.xnb</DestFile>
-  <DestTime>2018-01-15T13:48:43.361745+00:00</DestTime>
+  <SourceFile>G:/January15/MonoGameClient/Content/Player 2.png</SourceFile>
+  <SourceTime>2018-01-15T14:42:14+00:00</SourceTime>
+  <DestFile>G:/January15/MonoGameClient/Content/bin/Windows/Player 2.xnb</DestFile>
+  <DestTime>2018-01-15T14:44:44+00:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T15:05:36+00:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
