@@ -131,3 +131,56 @@ C:\Users\Owned\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Window
 C:\Users\Owned\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\obj\x86\Debug\MonoGameClient.csprojResolveAssemblyReference.cache
 C:\Users\Owned\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\obj\x86\Debug\MonoGameClient.exe
 C:\Users\Owned\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\obj\x86\Debug\MonoGameClient.pdb
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\Message.xnb
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\Player 1.xnb
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\Player 2.xnb
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\Player 3.xnb
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\Player 4.xnb
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\MonoGameClient.exe.config
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\MonoGameClient.exe
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\MonoGameClient.pdb
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\CommonDataItems.dll
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Microsoft.AspNet.SignalR.Client.dll
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Microsoft.Owin.dll
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Microsoft.Owin.Security.dll
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Newtonsoft.Json.dll
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Owin.dll
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\CommonDataItems.pdb
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Microsoft.AspNet.SignalR.Client.xml
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Microsoft.Owin.xml
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Microsoft.Owin.Security.xml
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Newtonsoft.Json.xml
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\obj\x86\Debug\MonoGameClient.csprojResolveAssemblyReference.cache
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\obj\x86\Debug\MonoGameClient.csproj.CoreCompileInputs.cache
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\obj\x86\Debug\MonoGameClient.exe
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\obj\x86\Debug\MonoGameClient.pdb
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\AsteroidBlaster.xnb
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\bgnofont.xnb
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\keyboardfont.xnb
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\PlayGame.xnb
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\GameMusic.wma
+C:\Users\nnult\Documents\GitHub\JJJNCasualGamesProject\MonoGameClient\bin\Windows\x86\Debug\Content\GameMusic.xnb
