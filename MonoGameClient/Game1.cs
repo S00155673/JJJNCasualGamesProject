@@ -7,6 +7,7 @@ using CommonDataItems;
 using System.Collections.Generic;
 using MonoGameClient.GameObjects;
 using Engine.Engines;
+using System.Linq;
 using GameComponentNS;
 using Microsoft.Xna.Framework.Media;
 
@@ -22,6 +23,7 @@ namespace MonoGameClient
         // The Signalr Client objects
         HubConnection serverConnection;
         IHubProxy proxy;
+        private PlayerData pdata;
 
         //Variables for background
         Texture2D bg;
@@ -92,8 +94,12 @@ namespace MonoGameClient
 
             serverConnection = new HubConnection("https://casualgamesjjjn.azurewebsites.net");
             //Use this if you want to test Locally...
+<<<<<<< HEAD
             //      serverConnection = new HubConnection("http://localhost:12719/");
             //serverConnection = new HubConnection("http://localhost:30791/");
+=======
+            //serverConnection = new HubConnection ("http://localhost:12719/");
+>>>>>>> Jordan-Davies
             serverConnection.StateChanged += ServerConnection_StateChanged;
             proxy = serverConnection.CreateHubProxy("GameHub");
             serverConnection.Start();
@@ -104,13 +110,27 @@ namespace MonoGameClient
             Action<List<PlayerData>> currentPlayers = clientPlayers;
             proxy.On<List<PlayerData>>("CurrentPlayers", currentPlayers);
 
+            Action<PlayerData> playerHasLeft = otherLeft;
+            proxy.On<PlayerData>("Leaving", playerHasLeft);
+
             Action<string, Position> otherMove = otherMovedClient;
             proxy.On<string, Position>("OtherMove", otherMove);
 
-            // Add the proxy client as a Game service o components can send messages 
+            // Add the proxy client as a Game service so components can send messages 
             Services.AddService<IHubProxy>(proxy);
 
             base.Initialize();
+        }
+
+        private void otherLeft(PlayerData obj)
+        {
+            //List<OtherPlayer> others = this.Components
+            //OtherPlayer playerGone = (OtherPlayer)this.Components.FirstOrDefault(c => c.GetType() == typeof(OtherPlayer));
+            OtherPlayer playerGone = (OtherPlayer)this.Components.FirstOrDefault(c => c.GetType() == typeof(OtherPlayer));
+            if (playerGone != null)
+            {
+               this.Components.Remove(playerGone);
+            }
         }
 
         private void otherMovedClient(string playerID, Position newPosition)
@@ -123,8 +143,13 @@ namespace MonoGameClient
                     OtherPlayer p = ((OtherPlayer)player);
                     p.opData.playerPosition = newPosition;
                     p.Position = new Point(p.opData.playerPosition.X, p.opData.playerPosition.Y);
+<<<<<<< HEAD
                     break;
                     //Break out of the only one player position is updated and its found...                    
+=======
+                    break; 
+                    //Break out when only one player position is updated and its found...                    
+>>>>>>> Jordan-Davies
                 }
             }
         }
@@ -155,7 +180,8 @@ namespace MonoGameClient
             switch (State.NewState)
             {
                 case ConnectionState.Connected:
-                    connectionMessage = "Connected...";
+                    //connectionMessage = "Connected...";
+                    new FadeText(this,Vector2.Zero, "Connected...");
                     Connected = true;
                     //startGame();
                     break;
@@ -191,13 +217,24 @@ namespace MonoGameClient
                 });
         }
 
+        private void LeaveGame()
+        {
+            proxy.Invoke<PlayerData>("Leaving", new object[] {pdata});
+        }
+
         private void CreatePlayer(PlayerData player)
         {
+<<<<<<< HEAD
             // Create an other player sprites in this client after
             new PlayerSprite(this, player, Content.Load<Texture2D>(player.imageName), new Point(player.playerPosition.X, player.playerPosition.Y));
             new FadeText(this, Vector2.Zero, "Welcome " + Name + " your assigned to " + player.imageName);
+=======
+            pdata = player;
+            // Create an other player sprites in this client afte
+            new PlayerSprite(this, player, Content.Load<Texture2D>(player.imageName),new Point(player.playerPosition.X, player.playerPosition.Y));
+            new FadeText(this, Vector2.Zero, "Welcome " + player.GamerTag + " your assigned to " + player.imageName);
+>>>>>>> Jordan-Davies
             //connectionMessage = player.playerID + " created ";
-
         }
 
         protected override void LoadContent()
@@ -231,7 +268,10 @@ namespace MonoGameClient
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            {
+                LeaveGame();
                 Exit();
+<<<<<<< HEAD
 
             #region starting in menu and switching to game
             //sets mouse state
@@ -272,6 +312,10 @@ namespace MonoGameClient
                     break;
             }
 
+=======
+            }
+            
+>>>>>>> Jordan-Davies
             // TODO: Add your update logic here
 
             previousMouseState = mouseState;
